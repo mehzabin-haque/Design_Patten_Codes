@@ -10,7 +10,6 @@ public class Main {
         idM.add(new Song("Hello There","Vallage na",1233));
         tdM.add(new Song("Hello There11111111","Vallage na11111111",12233));
         idM.add(tdM);
-        
         Concert concert = new Concert(everySong);
         concert.getSongList();
     }
