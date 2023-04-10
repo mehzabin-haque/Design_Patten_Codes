@@ -2,18 +2,17 @@ package Mediator;
 
 public class Main {
     public static void main(String[] args) {
-        UberMediator uber = new Uber();
+        UberMediator uberApp = new Uber();
 
-        Cab cab1 = new UberCab(uber, "UberX");
-        Cab cab2 = new UberCab(uber, "UberBlackX");
-        Cab cab3 = new UberCab(uber, "UberPool");
+        Cab uberX = new UberX();
+        Cab uberBlack = new UberBlack();
         
-        uber.addCab(cab1);
-        uber.addCab(cab2);
-        uber.addCab(cab3);
+        uberApp.addCab(uberX);
+        uberApp.addCab(uberBlack);
 
-        uber.rideRequest("Nilkhet", "Mirpur 10", cab1);
-        uber.rideRequest("Dhanmondi", "Mirpur 12", cab2);
-        uber.rideRequest("Curzon", "Gulshan", cab2);
+        // Request rides
+        uberApp.rideRequest("Times Square", "Central Park", uberX);
+        uberApp.rideRequest("Empire State Building", "Statue of Liberty", uberBlack);
+        uberApp.rideRequest("Brooklyn Bridge", "Central Park", uberX);
     }
 }

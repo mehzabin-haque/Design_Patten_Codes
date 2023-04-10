@@ -4,28 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Uber implements UberMediator {
+    private List<Cab> cabs = new ArrayList<>();
 
-    private List<Cab> cabList = new ArrayList<>();
     @Override
-    public void addCab(Cab cab) {
-       cabList.add(cab);
-    }
-    @Override
-    public void rideRequest(String pickUpLocation, String dropOffLocation, Cab cab) {
-       boolean avail = false;
+    public void rideRequest(String pickupLocation, String dropoffLocation, Cab colleague) {
+        boolean available = false;
 
-       for(Cab cabs:cabList){
-        if(cabs.isAvail){
-            cabs.recieveRequest(pickUpLocation, dropOffLocation);
-            avail = true;
-            break;
+        for (Cab cab : cabs) {
+            if (cab.isAvailable()) {
+                cab.receiveRequest(pickupLocation, dropoffLocation);
+                available = true;
+                break;
+            }
         }
-       }
 
-       if(!avail){
-        System.out.println("No Cabs avaiable at the moment\nTry again later......");
-       }
+        if (!available) {
+            System.out.println("No cabs available at the moment. Please try again later.");
+        }
     }
 
-    
+    @Override
+    public void addCab(Cab colleague) {
+        cabs.add(colleague);
+    }
 }
