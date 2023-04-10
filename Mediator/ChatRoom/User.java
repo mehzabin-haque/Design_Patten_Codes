@@ -1,4 +1,4 @@
-package Mediator.CharRoom;
+package Mediator.ChatRoom;
 
 public abstract class User {
     protected ChatRoomMediator mediator;

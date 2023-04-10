@@ -1,4 +1,4 @@
-package Mediator.CharRoom;
+package Mediator.ChatRoom;
 
 public class Main {
     public static void main(String[] args) {

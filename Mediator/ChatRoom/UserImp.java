@@ -1,4 +1,4 @@
-package Mediator.CharRoom;
+package Mediator.ChatRoom;
 
 public class UserImp extends User {
 
