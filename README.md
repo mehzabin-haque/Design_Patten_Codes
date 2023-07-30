@@ -46,5 +46,6 @@ Demonstrates the Strategy pattern, where different algorithms or strategies can 
 Implements the Template pattern, which defines the skeleton of an algorithm in a base class, with subclasses implementing specific steps of the algorithm.
 
 ----
+
 This comprehensive collection of design pattern code provides valuable resources for understanding and implementing these patterns in various software projects, promoting code reusability, flexibility, and maintainability.
 
